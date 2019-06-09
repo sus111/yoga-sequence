@@ -3,16 +3,21 @@ import styled from 'styled-components'
 
 import { colors } from '../../globalStyles';
 
-const Wrapper = styled.div`
-  border: 1px solid ${colors.gorse};
-  height: 300px;
-  width: 100px;
-`
-
 interface CardProps {
   svg: any
   text: string
 }
+
+const Wrapper = styled.div`
+  align-items: center;
+  border: 1px solid ${colors.grayChateau};
+  display: flex;
+  flex-direction: column;
+`
+
+const Caption = styled.p`
+  margin-bottom: 12px;
+`
 
 const Card: React.FC<CardProps> = ({
   svg: SVG, text
@@ -20,7 +25,7 @@ const Card: React.FC<CardProps> = ({
   return (
     <Wrapper>
       <SVG />
-      {text}
+      <Caption>{text}</Caption>
     </Wrapper>
   );
 }
