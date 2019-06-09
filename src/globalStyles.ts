@@ -1,5 +1,13 @@
 import reset from 'styled-reset';
 
+const colors = {
+  white: 'hsl(0, 0%, 100%)',
+  gorse: 'hsl(58, 100%, 66%)', // brand yellow
+  pampas: 'hsl(60, 23%, 97%)', // BG
+  grayChateau: 'hsl(210, 7%, 62%)', // subheader
+  shark: 'hsl(210, 6%, 20%)',
+};
+
 const globalStyles = `
   ${reset};
 
@@ -13,13 +21,6 @@ const globalStyles = `
     -moz-osx-font-smoothing: grayscale;
   }
 `
-
-const colors = {
-  gulfStream: '#7BAFA8',
-  opaqueBlack: 'rgba(0, 0, 0, 0.5)',
-  mineShaft: '#303030',
-  white: '#FFF',
-};
 
 export {
   colors,

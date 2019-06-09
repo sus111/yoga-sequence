@@ -3,26 +3,24 @@ import styled from 'styled-components'
 
 import { colors } from '../../globalStyles';
 
+import Card from '../card/Card'
+import DownwardDog from '../../assets/icons/DownwardDog';
+
 const Wrapper = styled.div`
   border: 1px solid ${colors.gorse};
   height: 300px;
   width: 100px;
 `
 
-interface CardProps {
-  svg: any
-  text: string
-}
-
-const Card: React.FC<CardProps> = ({
-  svg: SVG, text
-}) => {
+const SequenceGrid: React.FC = () => {
   return (
     <Wrapper>
-      <SVG />
-      {text}
+      <Card
+        svg={DownwardDog}
+        text="Downward Dog"
+      />
     </Wrapper>
   );
 }
 
-export default Card;
+export default SequenceGrid;
