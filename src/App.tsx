@@ -1,14 +1,24 @@
 import React from 'react';
-import './App.css';
+import styled, { createGlobalStyle } from 'styled-components'
+import { globalStyles } from './globalStyles';
 
 import Card from './components/card/Card'
 
+const Header = styled.h1`
+  font-size: 32px;
+`
+
+const GlobalStyle = createGlobalStyle`
+  ${globalStyles}
+`;
+
 const App: React.FC = () => {
   return (
-    <div className="App">
-      yoga sequence
+    <>
+      <GlobalStyle />
+      <Header>Yoga Sequence Creator</Header>
       <Card />
-    </div>
+    </>
   );
 }
 

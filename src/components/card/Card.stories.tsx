@@ -7,6 +7,3 @@ storiesOf("Card", module)
   .add("with text", () => (
     <Card>Hello Card</Card>
   ))
-  .add("with some emoji", () => (
-    <Card>😀 😎 👍 💯</Card>
-  ));
